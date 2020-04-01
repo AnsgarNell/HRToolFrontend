@@ -3,7 +3,9 @@ import {HttpClient} from '@angular/common/http';
 import {Departments} from '../../departments/departments-model';
 import {Observable} from 'rxjs';
 
-const baseUrl = `http://localhost:8080/`;
+import * as config from '../../../assets/config/api.config.json';
+
+const baseUrl = config.ApiUrl;
 
 @Injectable({
   providedIn: 'root'
