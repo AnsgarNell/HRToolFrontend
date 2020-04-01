@@ -1,9 +1,8 @@
 <h4 class="ui horizontal divider header">
-  <i class="users icon"></i>
+  <i class="building icon"></i>
   Departments
 </h4>
 <div class="ui segment">
-
   <table class="ui celled table">
     <thead>
     <tr>
@@ -12,8 +11,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let department of departments" app-departments-list-detail [department]="department">
-    </tr>
+    <tr *ngFor="let department of departments" app-departments-list-detail [department]="department"></tr>
     </tbody>
   </table>
 </div>
