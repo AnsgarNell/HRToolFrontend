@@ -1,0 +1,74 @@
+= Human Resources Management System Frontend
+Ansgar Nell <ansgar.nell@(Google's email).com>
+1.0, April 1, 2020
+:toc:
+:icons: font
+
+This document describes the Human Resources (HR) Management System Frontend developed based on the
+https://dev.mysql.com/doc/employee/en/[Employees Sample Database] provided by https://www.mysql.com/[MySQL].
+footnote:[The development of the project is explained in the Medium Article (will be linked when finished)]
+
+== Introduction
+
+This document explains the frontend part of the HR Management System project.
+
+== Requirements
+
+=== Functional Requirements
+
+==== Departments
+
+[#departments-list-view]
+. Departments List View
++
+
+The main page of the application must show the list of the departments stored in the database. This view must allow
+following operations:
+
+* Navigate to the <<#department-employees-view, Department Employees View>>
+
++
+[#department-employees-view]
+. Department Employees View
++
+
+This view must show the following information:
+
+* Currently selected department
+* Current manager
+* A list of the department employees
+
++
+[#department-managers-view]
+. Department Managers View
++
+
+This view must show the following information:
+
+* Currently selected department
+* Current manager
+* A list of the former department managers
+
+=== Non-functional Requirements
+
+== Project Structure
+
+=== Services
+
+==== API Service
+
+The communication with the API is done exclusively with a service, stored in the shared/services folder. The goal host
+URL is stored in the api.config.json file under the config folder in assets, so that a quick change is possible without
+having to rebuild the project.
+
+This service implements the different requests that the API described in the frontend accepts.
+
+=== Components
+
+The components reflect the model logic behind the employees database. So, a separate folder has been created to store
+the corresponding implementations.
+
+==== Departments
+
+* Departments List
+* Departments List Detail
