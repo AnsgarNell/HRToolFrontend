@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../../shared/services/api.service';
-import {Departments} from '../departments-model';
+import {Department} from '../department-model';
 import {finalize} from 'rxjs/operators';
 import {MessageService} from '../../shared/services/message.service';
 
@@ -10,7 +10,7 @@ import {MessageService} from '../../shared/services/message.service';
   styleUrls: ['./departments-list.component.css']
 })
 export class DepartmentsListComponent implements OnInit {
-  departments: Departments[];
+  departments: Department[];
   loading: boolean;
 
   constructor(apiServicesService: ApiService,

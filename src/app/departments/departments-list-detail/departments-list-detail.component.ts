@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Departments} from '../departments-model';
+import {Department} from '../department-model';
 
 @Component({
   selector: '[app-departments-list-detail]',
@@ -7,7 +7,7 @@ import {Departments} from '../departments-model';
   styleUrls: ['./departments-list-detail.component.css']
 })
 export class DepartmentsListDetailComponent implements OnInit {
-  @Input() department: Departments;
+  @Input() department: Department;
 
   constructor() { }
 

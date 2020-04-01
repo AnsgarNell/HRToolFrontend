@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Departments} from '../../departments/departments-model';
+import {Department} from '../../departments/department-model';
 import {Observable} from 'rxjs';
 
 import * as config from '../../../assets/config/api.config.json';
@@ -14,7 +14,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getDepartments(): Observable<Departments[]> {
-    return this.http.get<Departments[]>(baseUrl + 'departments');
+  getDepartments(): Observable<Department[]> {
+    return this.http.get<Department[]>(baseUrl + 'departments');
   }
 }

@@ -1,9 +1,9 @@
 /**
- * Departments is a data-structure that holds an individual
+ * Department is a data-structure that holds an individual
  * department
  */
 
-export class Departments {
+export class Department {
   deptNo: string;
   deptName: string;
 
