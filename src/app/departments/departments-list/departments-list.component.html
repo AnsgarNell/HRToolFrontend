@@ -1,4 +1,4 @@
-<h4 class="ui horizontal divider header">
+<!--<h4 class="ui horizontal divider header">
   <i class="building icon"></i>
   Departments
 </h4>
@@ -6,12 +6,43 @@
   <table class="ui celled table">
     <thead>
     <tr>
-      <th>Number</th>
+      <th>Department Number</th>
       <th>Name</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let department of departments" app-departments-list-detail [department]="department"></tr>
+    <tr *ngFor="let department of departments">
+      <td data-label="Name">
+        <a routerLink="/departments/{{department.deptNo}}">{{department.deptNo}}</a>
+      </td>
+      <td data-label="Department Name">
+        {{department.deptName}}
+      </td>
+    </tr>
     </tbody>
   </table>
+</div>-->
+
+<h4 class="ui horizontal divider header">
+  <i class="building icon"></i>
+  Departments
+</h4>
+<div class="ui segment">
+  <div class="ui container">
+    <div class="ui cards">
+      <div class="ui centered card" *ngFor="let department of departments">
+        <div class="content center aligned">
+          <div class="header centered">
+            {{department.deptNo}}
+          </div>
+          <div class="description">
+            {{department.deptName}}
+          </div>
+        </div>
+        <a class="ui bottom attached button" routerLink="/albums/{{department.deptNo}}">
+          View
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

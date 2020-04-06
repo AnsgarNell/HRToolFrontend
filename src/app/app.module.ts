@@ -5,14 +5,12 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DepartmentsListComponent } from './departments/departments-list/departments-list.component';
-import { DepartmentsListDetailComponent } from './departments/departments-list-detail/departments-list-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DepartmentsListComponent,
-    DepartmentsListDetailComponent
+    DepartmentsListComponent
   ],
   imports: [
     BrowserModule,
