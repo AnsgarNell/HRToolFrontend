@@ -1,28 +1,3 @@
-<!--<h4 class="ui horizontal divider header">
-  <i class="building icon"></i>
-  Departments
-</h4>
-<div class="ui segment">
-  <table class="ui celled table">
-    <thead>
-    <tr>
-      <th>Department Number</th>
-      <th>Name</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let department of departments">
-      <td data-label="Name">
-        <a routerLink="/departments/{{department.deptNo}}">{{department.deptNo}}</a>
-      </td>
-      <td data-label="Department Name">
-        {{department.deptName}}
-      </td>
-    </tr>
-    </tbody>
-  </table>
-</div>-->
-
 <h4 class="ui horizontal divider header">
   <i class="building icon"></i>
   Departments
@@ -39,7 +14,7 @@
             {{department.deptName}}
           </div>
         </div>
-        <a class="ui bottom attached button" routerLink="/albums/{{department.deptNo}}">
+        <a class="ui bottom attached button" routerLink="/departments/{{department.deptNo}}">
           View
         </a>
       </div>
