@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {DepartmentsListComponent} from './departments/departments-list/departments-list.component';
+import {DepartmentsDetailComponent} from './departments/departments-detail/departments-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'departments', pathMatch: 'full' },
   { path: 'departments', component: DepartmentsListComponent },
+  { path: 'departments/:id', component: DepartmentsDetailComponent },
   { path: '**', redirectTo: 'departments' }
 ];
 
