@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../../shared/services/api.service';
-import {Department} from '../department-model';
+import {Department} from '../department';
 import {finalize} from 'rxjs/operators';
 import {MessageService} from '../../shared/services/message.service';
 
