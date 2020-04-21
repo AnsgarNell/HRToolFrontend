@@ -1,9 +1,28 @@
 <h4 class="ui horizontal divider header">
-  <i class="building icon"></i>
-  Departments
+<i class="user icon"></i>
+{{departmentDTO?.department.deptName}}
 </h4>
 <div class="ui segment">
-  <div class="ui container">
-    Miau
+  <div class="ui active inverted dimmer" *ngIf="loading">
+    <div class="ui text loader">Loading</div>
   </div>
+  <div class="ui segment">
+    <div class="ui two column very relaxed grid">
+      <div class="column">
+        <table class="ui definition table">
+          <tbody>
+          <tr>
+            <td class="two wide column">Id</td>
+            <td>{{departmentDTO?.department.deptNo}}</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>{{departmentDTO?.department.deptName}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h4 class="ui horizontal divider header"></h4>
 </div>
