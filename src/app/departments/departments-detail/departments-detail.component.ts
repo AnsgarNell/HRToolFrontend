@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {DepartmentBasicInfo} from '../department-basic-info';
 import {DepartmentDTO} from '../department-dto';
 import {ApiService} from '../../shared/services/api.service';
 import {MessageService} from '../../shared/services/message.service';
 import {finalize} from 'rxjs/operators';
 import {ActivatedRoute} from '@angular/router';
+import {SerializedEmployee} from '../../shared/models/serialized-employee';
 
 @Component({
   selector: 'app-departments-detail',
@@ -13,6 +13,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class DepartmentsDetailComponent implements OnInit {
   departmentDTO: DepartmentDTO;
+  managers: SerializedEmployee[];
+  currentManager: SerializedEmployee;
   loading: boolean;
 
   constructor(private route: ActivatedRoute,
@@ -26,6 +28,8 @@ export class DepartmentsDetailComponent implements OnInit {
       ).subscribe(
       departmentDTO => {
         this.departmentDTO = departmentDTO;
+        this.managers = departmentDTO.department.managers;
+        this.currentManager = this.managers[0];
       },
       error => {
         this.messageService.add(`${error.name}: "${error.message}"`);
