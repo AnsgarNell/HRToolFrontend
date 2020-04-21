@@ -2,13 +2,9 @@
  * Department is a data-structure that holds an individual
  * department
  */
+import {DepartmentBasicInfo} from './department-basic-info';
+import {DepartmentManager} from '../shared/models/department-manager';
 
-export class Department {
-  deptNo: string;
-  deptName: string;
-
-  constructor(obj?: any) {
-    this.deptNo = obj && obj.deptNo || null;
-    this.deptName = obj && obj.deptName || null;
-  }
+export class Department extends DepartmentBasicInfo {
+  managers: DepartmentManager[];
 }
