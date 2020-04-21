@@ -3,8 +3,8 @@
  * department
  */
 import {DepartmentBasicInfo} from './department-basic-info';
-import {DepartmentManager} from '../shared/models/department-manager';
+import {SerializedEmployee} from '../shared/models/serialized-employee';
 
 export class Department extends DepartmentBasicInfo {
-  managers: DepartmentManager[];
+  managers: SerializedEmployee[];
 }

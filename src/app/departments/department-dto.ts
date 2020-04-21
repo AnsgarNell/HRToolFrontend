@@ -1,7 +1,7 @@
 import {Department} from './department';
-import {DepartmentEmployee} from '../shared/models/department-employee';
+import {SerializedEmployee} from '../shared/models/serialized-employee';
 
 export class DepartmentDTO {
   department: Department;
-  employees: DepartmentEmployee[];
+  employees: SerializedEmployee[];
 }
