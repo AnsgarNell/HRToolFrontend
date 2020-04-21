@@ -4,4 +4,6 @@ import {Employee} from '../../employees/employee';
 export class DepartmentManager {
   department: Department;
   employee: Employee;
+  fromDate: Date;
+  toDate: Date;
 }
