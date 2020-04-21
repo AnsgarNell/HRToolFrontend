@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../../shared/services/api.service';
-import {Department} from '../department';
 import {finalize} from 'rxjs/operators';
 import {MessageService} from '../../shared/services/message.service';
+import {DepartmentBasicInfo} from '../department-basic-info';
 
 @Component({
   selector: 'app-departments-list',
@@ -10,7 +10,7 @@ import {MessageService} from '../../shared/services/message.service';
   styleUrls: ['./departments-list.component.css']
 })
 export class DepartmentsListComponent implements OnInit {
-  departments: Department[];
+  departments: DepartmentBasicInfo[];
   loading: boolean;
 
   constructor(apiServicesService: ApiService,
