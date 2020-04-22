@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { DepartmentsListComponent } from './departments/departments-list/departments-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DepartmentsDetailComponent } from './departments/departments-detail/departments-detail.component';
+import { EmployeesListTableComponent } from './employees/employees-list-table/employees-list-table.component';
+import { EmployeesListComponent } from './employees/employees-list/employees-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DepartmentsListComponent,
-    DepartmentsDetailComponent
+    DepartmentsDetailComponent,
+    EmployeesListTableComponent,
+    EmployeesListComponent
   ],
   imports: [
     BrowserModule,
