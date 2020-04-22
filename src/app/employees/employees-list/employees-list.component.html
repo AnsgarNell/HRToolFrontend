@@ -1,0 +1,13 @@
+<h4 class="ui horizontal divider header">
+  <i class="users icon"></i>
+  Employees
+</h4>
+<div class="ui segment">
+  <div class="ui active inverted dimmer" *ngIf="loading">
+    <div class="ui text loader">Loading</div>
+  </div>
+  <div class="ui segment">
+    <app-employees-list-table [employees]="employees"></app-employees-list-table>
+    <h4 class="ui horizontal divider header"></h4>
+  </div>
+</div>
