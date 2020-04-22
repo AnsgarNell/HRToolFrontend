@@ -22,7 +22,9 @@ export class DepartmentsDetailComponent implements OnInit {
               private messageService: MessageService) {
     this.loading = true;
     const deptNo: string = this.route.snapshot.paramMap.get('deptNo');
-    apiServicesService.getDepartmentById(deptNo)
+    const start = +this.route.snapshot.paramMap.get('start');
+    const limit = +this.route.snapshot.paramMap.get('limit');
+    apiServicesService.getDepartmentById(deptNo, start, limit)
       .pipe(
         finalize(() => this.loading = false),
       ).subscribe(
